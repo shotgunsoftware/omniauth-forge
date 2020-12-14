@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'lib/omniauth/forge/version'
+require_relative 'lib/omniauth_forge/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'omniauth-forge'
-  spec.version       = Omniauth::Forge::VERSION
+  spec.version       = OmniAuth::Forge::VERSION
   spec.authors       = ['Denis <Zaratan> Pasin']
   spec.email         = ['denis.pasin@autodesk.com']
 
@@ -38,9 +38,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'bundler-audit'
   spec.add_development_dependency 'dip'
+  spec.add_development_dependency 'dotenv'
   spec.add_development_dependency 'faker'
   spec.add_development_dependency 'overcommit'
   spec.add_development_dependency 'pry-byebug'
+  spec.add_development_dependency 'puma'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rubocop'
@@ -48,6 +50,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop-performance'
   spec.add_development_dependency 'simplecov'
   spec.add_development_dependency 'simplecov-rcov'
+  spec.add_development_dependency 'sinatra'
   spec.add_development_dependency 'timecop'
   spec.add_development_dependency 'vcr'
   spec.add_development_dependency 'webmock'

@@ -20,6 +20,19 @@ Or install it yourself as:
 
     $ gem install omniauth-forge
 
+## CVE
+
+See [Omniauth Wiki][https://github.com/omniauth/omniauth/wiki/Resolving-CVE-2015-9284]. 
+There's an existing unfixed CVE on omniauth. This CVE is mitigated in Rails by using the gem [omniauth-rails_csrf_protection](https://github.com/cookpad/omniauth-rails_csrf_protection).
+This gem will depend on that gem in order to protect as many people as possible.
+
+### Using bundle audit
+
+Since the gem will be used by default you can ignore bundle audit warnings this way:
+```sh
+bundle audit check --ignore CVE-2015-9284
+```
+
 ## Usage
 
 TODO: Write usage instructions here

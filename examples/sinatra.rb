@@ -14,7 +14,6 @@ use OmniAuth::Builder do
            ENV['FORGE_CLIENT_SECRET'],
            {
              client_options: { site: ENV['FORGE_API_BASE_URL'] },
-             root_uri: ENV['ROOT_URI'],
            }
 end
 

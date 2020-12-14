@@ -35,6 +35,27 @@ bundle audit check --ignore CVE-2015-9284
 
 ## Usage
 
+This is a provider for [omniauth](https://github.com/omniauth/omniauth) based on oauth2 [3-legged forge authentication](https://forge.autodesk.com/en/docs/oauth/v2/tutorials/get-3-legged-token/). Basic usage is:
+
+```ruby
+provider(
+  :forge,
+  'FORGE_CLIENT_ID',
+  'FORGE_CLIENT_SECRET',
+  {
+    callback_path: '/forge/callback' # default
+  }
+)
+```
+
+### Configuration options
+
+- **callback_path**: This is the path used for the callback from forge. Default will be '/forge/callback' but you can set it to anything defined on the forge side.
+
+### Examples
+
+- [Basic Sinatra](./examples/sinatra.rb)
+
 TODO: Write usage instructions here
 
 ## Development

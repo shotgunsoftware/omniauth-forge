@@ -15,7 +15,6 @@ module OmniAuth
       )
 
       option :callback_path, '/forge/callback'
-      option :root_uri, 'https://localhost'
 
       uid do
         raw_info['userId']
@@ -36,19 +35,13 @@ module OmniAuth
         }
       end
 
-      def raw_info
-        @raw_info ||= access_token.get('/userprofile/v1/users/@me').parsed
+      # Forge is expecting a callback_url without parameters
+      def callback_url
+        super.gsub(/\?.*$/, '')
       end
 
-      def initialize(app, *args, &block)
-        super
-        if @options&.[](:client_options)&.[](:redirect_uri) &&
-           @options[:client_options][:redirect_uri] != self.class.default_options[:client_options][:redirect_uri]
-          return
-        end
-
-        @options[:client_options][:redirect_uri] =
-          "#{@options[:root_uri].to_s.gsub(%r{/+$}, '')}/#{options[:callback_path].to_s.gsub(%r{^/+}, '')}"
+      def raw_info
+        @raw_info ||= access_token.get('/userprofile/v1/users/@me').parsed
       end
     end
   end

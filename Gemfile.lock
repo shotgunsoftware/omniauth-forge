@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniauth-forge (0.1.0)
+    omniauth-forge (0.1.1)
       omniauth
       omniauth-oauth2
       omniauth-rails_csrf_protection (~> 0.1)

@@ -7,6 +7,7 @@ PreCommit:
     enabled: true
   BundleAudit:
     enabled: true
+    command: ['bundle', 'audit', 'check', '--ignore', 'CVE-2015-9284']
 PrePush:
   RSpec:
     enabled: true

@@ -1,0 +1,16 @@
+PreCommit:
+  RuboCop:
+    enabled: true
+    command: ['rubocop', '-P']
+    quiet: false
+  BundleOutdated:
+    enabled: true
+  BundleAudit:
+    enabled: true
+PrePush:
+  RSpec:
+    enabled: true
+    command: ['dip', 'rspec', '-f', 'p'] # Invoke within Bundler context
+    quiet: false
+  Rubocop:
+    enabled: true

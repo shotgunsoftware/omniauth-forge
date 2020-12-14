@@ -10,7 +10,7 @@ PreCommit:
 PrePush:
   RSpec:
     enabled: true
-    command: ['dip', 'rspec', '-f', 'p'] # Invoke within Bundler context
+    command: ['rspec', '-f', 'p'] # Invoke within Bundler context
     quiet: false
   Rubocop:
     enabled: true

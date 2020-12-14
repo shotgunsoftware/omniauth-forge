@@ -32,6 +32,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'omniauth'
   spec.add_dependency 'omniauth-oauth2'
+  spec.add_dependency 'omniauth-rails_csrf_protection', '~> 0.1' # No CVE-2015-9284
   spec.add_dependency 'zeitwerk', '~> 2'
 
   spec.add_development_dependency 'bundler'

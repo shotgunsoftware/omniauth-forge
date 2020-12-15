@@ -18,3 +18,6 @@ loader.inflector.inflect(
 )
 
 loader.setup # ready!
+
+module OmniAuthForge
+end

@@ -11,14 +11,12 @@ module OmniAuth
           site: 'https://developer.api.autodesk.com',
           authorize_url: '/authentication/v1/authorize',
           token_url: '/authentication/v1/gettoken',
-        }
+        },
       )
 
       option :callback_path, '/forge/callback'
 
-      uid do
-        raw_info['userId']
-      end
+      uid { raw_info['userId'] }
 
       info do
         {
@@ -29,11 +27,7 @@ module OmniAuth
         }
       end
 
-      extra do
-        {
-          'raw_info' => raw_info,
-        }
-      end
+      extra { { 'raw_info' => raw_info } }
 
       # Forge is expecting a callback_url without parameters
       def callback_url

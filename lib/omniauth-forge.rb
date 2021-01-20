@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "zeitwerk"
+require 'zeitwerk'
 
 require 'omniauth'
 require 'omniauth-oauth2'
@@ -13,11 +13,10 @@ require 'omniauth-oauth2'
 loader = Zeitwerk::Loader.for_gem
 
 loader.inflector.inflect(
-  "omniauth" => "OmniAuth",
-  "omniauth-forge" => "OmniAuthForge"
+  'omniauth' => 'OmniAuth',
+  'omniauth-forge' => 'OmniAuthForge',
 )
 
 loader.setup # ready!
 
-module OmniAuthForge
-end
+module OmniAuthForge; end

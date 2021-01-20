@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2021-01-20
+### Changed
+- Forced Ominauth >= 2 to mitigate CVE-2015-9284
+
 ## [0.2.0] - 2021-01-19
 ### Added
 - Using rubocop + prettier combo for linting
@@ -17,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First working version of the gem.
 - Added proper documentation.
 
-[Unreleased]: https://github.com/shotgunsoftware/omniauth-forge/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/shotgunsoftware/omniauth-forge/compare/v0.2.1...HEAD
+[0.2.0]: https://github.com/shotgunsoftware/omniauth-forge/releases/tag/v0.2.1
 [0.2.0]: https://github.com/shotgunsoftware/omniauth-forge/releases/tag/v0.2.0
 [0.1.1]: https://github.com/shotgunsoftware/omniauth-forge/releases/tag/v0.1.1

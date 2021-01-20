@@ -32,9 +32,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'omniauth'
+  spec.add_dependency 'omniauth', '>= 2'
   spec.add_dependency 'omniauth-oauth2'
-  spec.add_dependency 'omniauth-rails_csrf_protection', '> 0.1' # No CVE-2015-9284
   spec.add_dependency 'zeitwerk', '~> 2'
 
   spec.add_development_dependency 'bundler'

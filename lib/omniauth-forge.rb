@@ -14,7 +14,7 @@ loader = Zeitwerk::Loader.for_gem
 
 loader.inflector.inflect(
   'omniauth' => 'OmniAuth',
-  'omniauth-forge' => 'OmniAuthForge'
+  'omniauth-forge' => 'OmniAuthForge',
 )
 
 loader.setup # ready!

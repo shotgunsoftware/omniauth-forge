@@ -10,8 +10,8 @@ module OmniAuth
         {
           site: 'https://developer.api.autodesk.com',
           authorize_url: '/authentication/v1/authorize',
-          token_url: '/authentication/v1/gettoken'
-        }
+          token_url: '/authentication/v1/gettoken',
+        },
       )
 
       option :callback_path, '/forge/callback'
@@ -23,7 +23,7 @@ module OmniAuth
           user_name: raw_info['userName'],
           email: raw_info['emailId'],
           first_name: raw_info['firstName'],
-          last_name: raw_info['lastName']
+          last_name: raw_info['lastName'],
         }
       end
 

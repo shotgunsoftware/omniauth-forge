@@ -60,4 +60,4 @@ jobs:
     - name: Fetch tags from remote
       run: "git fetch -t"
     - name: Publish if version change
-      run: 'git diff `git tag | tail -1` -- lib/omniauth_forge/version.rb | grep -E "^\+.*VERSION" && rake release || echo "No release for now"'
+      run: 'git diff `git tag | tail -1` -- lib/omniauth/forge/version.rb | grep -E "^\+.*VERSION" && rake release || echo "No release for now"'
